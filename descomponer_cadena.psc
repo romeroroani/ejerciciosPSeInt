@@ -1,5 +1,5 @@
 Algoritmo descomponer_cadena
-    Definir palabra, caracter_actual, caracteres_finales,palabra_inv como caracter;
+    Definir palabra, caracter_actual, caracteres_finales,palabra_inversa como caracter;
 	Definir long,i,i2 como entero;
 
     Escribir "Ingresa una palabra o frase:";
@@ -12,10 +12,10 @@ Algoritmo descomponer_cadena
         caracter_actual <- subcadena(palabra, i, i);
 		caracteres_finales[i]<-caracter_actual;
     FinPara
-	palabra_inv<-"";
+	palabra_inversa<-"";
 	Para i2 <- long-1 Hasta 0 Con Paso -1 Hacer
 		
-		palabra_inv<- concatenar(palabra_inv, caracteres_finales[i2]);
+		palabra_inversa<- concatenar(palabra_inversa, caracteres_finales[i2]);
 	FinPara
-	Escribir palabra_inv;
+	Escribir palabra_inversa;
 FinAlgoritmo
