@@ -1,5 +1,5 @@
 Proceso numeroMayor
-	//Definimos variables 
+	
 	Definir num1,num2 Como Entero;
 	Escribir "Introduzca el numero 1";
 	Leer num1;
@@ -17,7 +17,6 @@ Proceso numeroMayor
 			Escribir num2," es menor que ",num1;
 		FinSi
 	FinSi
-	
 	
 	
 
