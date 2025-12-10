@@ -28,17 +28,55 @@ Funcion condicional
 	FinSi
 FinFuncion
 
+Funcion repeticion
+	Definir rep, pcon Como Caracter;
+	Escribir "El ordenador esta encendido? s/n";
+	Leer pcon;
+	Mientras pcon = "s" hacer
+	Repetir
+		Escribir "Entonces se ejecuta el programa";
+		Escribir "Mi programa mola, quieres repetirlo? s/n";
+		Leer rep;
+	Hasta Que rep = "n";
+	Escribir "El ordenador sigue encendido? s/n";
+	Leer pcon;
+FinMientras
+Escribir "El ordenador esta apagado, no se puede ejecutar el programa";
+FinFuncion
+
+Funcion array
+	Definir i Como Entero;
+	Definir estudiantes como cadena;
+	Dimensionar estudiantes[3,2];
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Escribir "Escribe nombre del alumno ", i+1;
+		Leer estudiantes[i,0];
+		Escribir "Escribe apellido alumno ", i+1;
+		Leer estudiantes[i,1];
+		
+	FinPara
+	Escribir "Estos son tus alumnos";
+	Para i<-0 Hasta 2 Con Paso 1 Hacer
+		Escribir estudiantes[i,0]," ", estudiantes[i,1];
+	FinPara
+
+	
+FinFuncion
+
+
+
+
 
 Proceso menu_programas
 	Definir exe como Real;
 	Escribir "Selecciona el programa que quieras ejecutar";
 	Escribir "1 (secuencial)";
 	Escribir "2 (estructuras de condicional si y sino)";
-	Escribir "3 (estructuras de repeticion repetir, para , hasta hacer)";
+	Escribir "3 (Bucles condicionales: Repetir hasta que y Mientras que)";
+	Escribir "4 (Bucles no condicionales: Para)";
 	
-	Escribir "5 (mientras hacer y hacer mientras)";
-	Escribir "6 (array unidimensional y bidimensional)";
-	Escribir "7 subprocesos";
+	Escribir "5 (Arrays)";
+	Escribir "6 subprocesos";
 	Leer exe;
 	Escribir "=========INICIO DEL PROGRAMA=========";
 	Segun exe Hacer
@@ -47,9 +85,9 @@ Proceso menu_programas
 		2:
 			condicional;
 		3:
-			
+			repeticion;
 		4:
-			
+			array;
 		5:
 			
 		6:
@@ -59,5 +97,7 @@ Proceso menu_programas
 			
 	FinSegun
 	Escribir "==========FIN DEL PROGRAMA==========";
+	
+	
 	
 FinProceso
